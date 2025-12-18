@@ -1,6 +1,6 @@
 // import tailwindcss from "@tailwindcss/vite";
-import './DefaultPage.css'
-import Logo from '../assets/ResourceFlow.png'
+import './Default.css'
+import Logo from '../assets/Resource-Flow.png'; 
 import { useNavigate } from 'react-router-dom';
 
 function DefaultPage(){
