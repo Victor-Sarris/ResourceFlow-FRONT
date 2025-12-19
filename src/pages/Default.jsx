@@ -46,7 +46,7 @@ function DefaultPage() {
           <div className="background">
             {/* Conteudo principal */}
             <div className="flex flex-col items-center justify-center">
-              <h1 className="font-bold ">
+              <h1 className="font-bold text-6xl">
                 Bem vindo(a) ao Resource Flow!
               </h1>
 
@@ -61,26 +61,37 @@ function DefaultPage() {
 
               {/* Botoes */}
               <div className="flex p-5 g-5 space-x-5">
-                <button className="bg-sky-600/80" onClick={handleSelectLogin} >
+                <button
+                  className="bg-sky-600/80 rounded-2xl p-4 cursor-pointer border-2 border-transparent hover:border-white transition-all duration-300"
+                  onClick={handleSelectSingUp}
+                >
                   Cadastrar-se
                 </button>
-                <button className="bg-emerald-600/80" onClick={handleSelectSingUp}>
+                <button
+                  className="bg-emerald-600/80 rounded-2xl p-4 cursor-pointer border-2 border-transparent hover:border-white transition-all duration-300"
+                  onClick={handleSelectLogin}
+                >
                   Fazer Login
                 </button>
               </div>
             </div>
           </div>
         </div>
-
+        
+        {/* Footer */}
         <div className="flex flex-col mt-10 mb-5">
           <div className="footer-content ">
-            <h3 className="">&copy; Victor S. | 🔱🪽, todos os direitos reservados</h3>
+            <h3 className="">
+              &copy; Victor S. | 🔱🪽, todos os direitos reservados
+            </h3>
+
+            {/* Links utéis */}
             <div className="mt-2.5 space-x-2.5">
               <a
                 href="https://victorsarris.netlify.app/"
                 target="blank"
                 rel="external"
-                className="text-white no-underline mx-2.5 hover:underline"
+                className="text-white no-underline mx-2.5 hover:text-blue-200"
               >
                 Meu portifólio
               </a>
@@ -88,7 +99,7 @@ function DefaultPage() {
                 href="https://www.linkedin.com/in/victorsarris/"
                 target="blank"
                 rel="external"
-                className="text-white no-underline mx-2.5 hover:underline"
+                className="text-white no-underline mx-2.5 hover:text-blue-200"
               >
                 Linkedin
               </a>
@@ -96,8 +107,9 @@ function DefaultPage() {
                 href="https://github.com/Victor-Sarris"
                 target="blank"
                 external="external"
-                className="text-white no-underline mx-2.5 hover:underline"
+                className="text-white no-underline mx-2.5 hover:text-blue-200"
               >
+                <i className="fab fa-github"></i>
                 GitHub
               </a>
             </div>
