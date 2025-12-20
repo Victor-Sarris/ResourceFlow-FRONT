@@ -1,11 +1,8 @@
 import Logo from "../assets/Resource-Flow.png";
 import { useNavigate } from "react-router-dom";
-import React, { useEffect, useState } from "react";
 
 // Importacoes de particulas
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadFull } from "tsparticles";
-import particlesConfig from "../services/particles-config";
+import ParticlesBackground from "../components/Particles";
 
 function DefaultPage() {
   const navigate = useNavigate();
@@ -16,26 +13,10 @@ function DefaultPage() {
     navigate("/Cadastro");
   };
 
-  const [init, setInit] = useState(false);
-
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadFull(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
-
   return (
     <>
       {/* Inicalizacao de particulas */}
-      {init && (
-        <Particles
-          id="tsparticles"
-          options={particlesConfig}
-          className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
-        />
-      )}
+      <ParticlesBackground />
       {/* Configurações gerais da página */}
       <div className="min-h-screen bg-[rgba(58,37,193,0.388)] text-white text-center flex flex-col items-center bg relative z-10">
         {/* Logo */}

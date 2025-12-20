@@ -26,10 +26,10 @@ const particlesConfig = {
   },
   particles: {
     color: {
-      value: "#ffffff",
+      value: "#ffffff" // cor das particulas,
     },
     links: {
-      color: "#ffffff",
+      color: "#ffffff", // cor do "link" das particulas
       distance: 75,
       enable: true,
       opacity: 0.3,
