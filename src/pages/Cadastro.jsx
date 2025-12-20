@@ -13,11 +13,8 @@ import { VscEye, VscEyeClosed } from "react-icons/vsc";
 function Cadastro() {
 
   // funcao para o checkbox
-  const [checked, setChecked] = React.useState(false);
+  const [isChecked, setIsChecked] = useState(false);
 
-  const handleCheckedChange = () => {
-    setChecked("checked");
-  };
 
   // funcao para o "exibir senha"
   const passwordRef = useRef(null);
@@ -114,8 +111,8 @@ function Cadastro() {
                 >
                   <input
                     type="checkbox"
-                    checked={checked}
-                    onChange={handleCheckedChange}
+                    checked={isChecked}
+                    onChange={() => setIsChecked(!isChecked)}
                   />
                   <p>
                     Eu concordo com os{" "}
