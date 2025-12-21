@@ -63,7 +63,7 @@ function DefaultPage() {
         <div className="flex flex-col mt-10 mb-5">
           <div className="footer-content ">
             <h3 className="">
-              &copy; Victor S. | 🔱🪽, todos os direitos reservados
+              &copy; Victor S. | 🔱🪽, todos os direitos reservados.
             </h3>
 
             {/* Links utéis */}

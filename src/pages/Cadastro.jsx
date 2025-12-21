@@ -166,6 +166,9 @@ function Cadastro() {
               <button className="bg-purple-500 text-white p-4 w-50 m-10 cursor-pointer border-2 rounded-[7px] border-transparent hover:bg-purple-400 transition-all duration-300">
                 Registrar-se
               </button>
+              <p className="text-[12px] text-black mt-[-10px]">
+                Resource Flow 2025 |🔱🪽
+              </p>
             </div>
           </div>
         </div>
