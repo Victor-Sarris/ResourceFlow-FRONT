@@ -44,7 +44,7 @@ function Profile() {
                                 alt="Foto de Perfil" 
                                 className="w-32 h-32 rounded-full border-4 border-slate-950 object-cover bg-slate-800"
                             />
-                            {/* Botão de trocar foto (só aparece no hover) */}
+                            {/* Botão de trocar foto */}
                             <button className="absolute bottom-0 right-0 p-2 bg-blue-600 rounded-full text-white hover:bg-blue-700 shadow-lg cursor-pointer transition-transform hover:scale-110">
                                 <IoCamera size={20} />
                             </button>
@@ -75,16 +75,12 @@ function Profile() {
                         )}
                     </div>
                 </div>
-
-                {/* --- Formulário --- */}
                 <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8 shadow-2xl max-w-4xl">
                     <h2 className="text-xl font-bold text-white mb-6 border-b border-slate-800 pb-4">
                         Informações Pessoais
                     </h2>
 
                     <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        
-                        {/* Campo Nome */}
                         <InputGroup 
                             label="Nome Completo" 
                             name="name"
@@ -93,8 +89,6 @@ function Profile() {
                             onChange={handleInputChange} 
                             disabled={!isEditing} 
                         />
-
-                        {/* Campo Email */}
                         <InputGroup 
                             label="Email Corporativo" 
                             name="email"
@@ -103,8 +97,6 @@ function Profile() {
                             onChange={handleInputChange} 
                             disabled={!isEditing} 
                         />
-
-                        {/* Campo Cargo (Geralmente não editável pelo usuário) */}
                         <div className="flex flex-col gap-2">
                             <label className="text-slate-400 text-sm font-medium ml-1">Cargo / Função</label>
                             <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-950/50 border border-slate-800 text-slate-500 cursor-not-allowed">
@@ -113,8 +105,6 @@ function Profile() {
                             </div>
                             <p className="text-xs text-slate-600 ml-1">O cargo não pode ser alterado por aqui.</p>
                         </div>
-
-                        {/* Campo Telefone */}
                         <InputGroup 
                             label="Telefone / Celular" 
                             name="phone"
@@ -123,8 +113,6 @@ function Profile() {
                             onChange={handleInputChange} 
                             disabled={!isEditing} 
                         />
-
-                        {/* Campo Bio (Textarea - ocupa 2 colunas) */}
                         <div className="flex flex-col gap-2 md:col-span-2">
                             <label className="text-slate-400 text-sm font-medium ml-1">Sobre Mim</label>
                             <textarea
@@ -153,7 +141,6 @@ function Profile() {
 function InputGroup({ label, name, value, onChange, disabled, icon }) {
     return (
         <div className="flex flex-col gap-2">
-            {/* O LABEL é crucial para acessibilidade e UX */}
             <label htmlFor={name} className="text-slate-400 text-sm font-medium ml-1">
                 {label}
             </label>
@@ -183,7 +170,6 @@ function InputGroup({ label, name, value, onChange, disabled, icon }) {
     )
 }
 
-// Ícone simples para o cargo (pode importar do react-icons se preferir)
 const IoBriefcaseIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512" fill="currentColor"><path d="M336 288H176v-32H16v196a12 12 0 0012 12h456a12 12 0 0012-12V256H336zM176 176v-64h160v64h48v-64a48 48 0 00-48-48H176a48 48 0 00-48 48v64z"/></svg>
 )
