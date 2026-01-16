@@ -4,12 +4,12 @@ import { IoAdd, IoSchoolOutline, IoBriefcaseOutline, IoHammerOutline, IoFilter }
 
 function DashBoard() {
     return (
-        <div className="flex min-h-screen bg-slate-950 ">
+        <div className="flex min-h-screen bg-slate-950">
             <Sidebar />
 
             <main className="flex-1 lg: p-8 transition-all duration-300">
                 <header className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                    <div className="ml-[60px]">
+                    <div className="ml-15">
                         <h1 className="text-3xl font-bold text-white">Agenda Institucional</h1>
                         <p className="text-slate-400">Gerencie eventos e horários da instituição.</p>
                     </div>
@@ -30,7 +30,7 @@ function DashBoard() {
                                 <EventTypeButton icon={<IoHammerOutline/>} label="Manutenção" color="border-emerald-500 text-emerald-400" />
                             </div>
                         </div>
-                        <div className="bg-gradient-to-br from-slate-900 to-slate-800 p-6 rounded-2xl border border-slate-700 shadow-xl flex-1">
+                        <div className="bg-linear-to-br from-slate-900 to-slate-800 p-6 rounded-2xl border border-slate-700 shadow-xl flex-1">
                             <h3 className="text-slate-300 text-sm font-medium mb-2">Próximo Evento</h3>
                             <p className="text-2xl font-bold text-white">Reunião Geral</p>
                             <p className="text-slate-400 text-sm mb-4">Amanhã, 14:00</p>
